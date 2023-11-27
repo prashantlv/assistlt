@@ -19,3 +19,10 @@ export HF_API_KEY=
 ```bash
 cd into the repository and run python app.py
 ```
+
+### Tasks breakdown
+
+- [x] LLM but not GPT 3.5 or better
+- [x] Sentiment Analysis
+- [x] NER
+- [] Update database
