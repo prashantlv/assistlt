@@ -11,6 +11,11 @@ pip install -r requirements.txt
 
 ## Usage
 
+Create API key from huggingface. Go to profile>settings>tokens.
+```bash
+export HF_API_KEY=
+```
+
 ```bash
 cd into the repository and run python app.py
 ```
