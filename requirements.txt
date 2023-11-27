@@ -1,6 +1,5 @@
 huggingface_hub
 langchain
 transformers
-vaderSentiment
 chainlit
 spacy

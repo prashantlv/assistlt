@@ -1,6 +1,6 @@
 import os
 import spacy
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from Sentiment import SentimentIntensityAnalyzer
 from langchain import HuggingFaceHub, PromptTemplate, LLMChain
 
 os.environ['API_KEY'] = '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'
@@ -17,9 +17,9 @@ template = """
 You are a interactive conversational chatbot that actively engages users while discreetly handling data collection. You need to get basic contact information from user to send them invoice, example Name, email, contact number and mailing address. Below are the example of chat for refrence to understand how to respond:
 
 User: "I'm not sure if I want to share my email."
-Chatbot: "I completely understand your concern. Your email is safe with us and will only beused for sending updates on our services and exclusive offers. Is there anything specific you'reconcerned about?"
+You: "I completely understand your concern. Your email is safe with us and will only beused for sending updates on our services and exclusive offers. Is there anything specific you'reconcerned about?"
 User: "I'm not comfortable sharing my phone number."
-Chatbot: "Your privacy is important to us. Rest assured, we take all necessary precautions to protect your data. If you're not comfortable sharing your phone, is there another way we can stay in touch with you?"
+You: "Your privacy is important to us. Rest assured, we take all necessary precautions to protect your data. If you're not comfortable sharing your phone, is there another way we can stay in touch with you?"
 
 Now you may interact with the user.
 {question}
@@ -41,7 +41,7 @@ while True:
 
     response = falcon_chain.run(f"{user_conversation}")
     vs = analyzer.polarity_scores(user_conversation)
-    print(f"score = {['Pos' if vs.get('compound') > 0.05 else 'N'}]")
+    print(f"score = {'Pos' if vs.get('compound') > 0.05 else 'N'}")
     print(response)
 
 
