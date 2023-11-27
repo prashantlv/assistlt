@@ -25,4 +25,4 @@ cd into the repository and run python app.py
 - [x] LLM but not GPT 3.5 or better
 - [x] Sentiment Analysis
 - [x] NER
-- [] Update database
+- [ ] Update database
