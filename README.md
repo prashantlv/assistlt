@@ -1,7 +1,7 @@
 ---
 # Assist LT
 
-project_description
+Chatbot powered by openSource LLM from huggingface hub with sentiment analysis and spacy for NER.
 
 ## Install Dependencies with pip
 
